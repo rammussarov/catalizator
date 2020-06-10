@@ -1,13 +1,19 @@
 package dev.app.catalizator.domain;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Message {
+
+    @Id
+    private Long id;
 
     private String data;
 }

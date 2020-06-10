@@ -26,7 +26,7 @@ public class GreetingHandler {
                 )
                 .skip(start)
                 .take(count)
-                .map(Message::new);
+                .map(e -> Message.builder().data(e).build());
 
         return ServerResponse
                 .ok()
